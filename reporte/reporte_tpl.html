@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>SkillLab3_A01795438</title>
+<style>
+  @page { size: Letter; margin: 20mm 19mm 22mm; }
+  body { font-family: Georgia, "Times New Roman", serif; font-size: 10.5pt; line-height: 1.5; color: #1d1d1d; text-align: justify; }
+  h2, h3, th, .cover h1, .cover .eti, .cover .equipo { font-family: Arial, "Helvetica Neue", sans-serif; }
+  h2 { font-size: 15pt; color: #1B3F94; margin: 22px 0 10px; page-break-after: avoid; text-align: left; }
+  h3 { font-size: 11.5pt; color: #000; margin: 16px 0 6px; page-break-after: avoid; text-align: left; }
+  p { margin: 0 0 8px; }
+  code { font-family: Menlo, Consolas, monospace; font-size: 8.8pt; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 12px; font-size: 9pt; line-height: 1.35; page-break-inside: avoid; text-align: left; }
+  th { background: #1846C2; color: #fff; font-size: 8.6pt; font-weight: bold; padding: 6px 7px; border: 1px solid #1846C2; vertical-align: top; }
+  td { border: 1px solid #d6dbe4; padding: 6px 7px; vertical-align: top; }
+  tr:nth-child(odd) td { background: #F4F6FA; }
+  td.b { font-weight: bold; }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.c { text-align: center; }
+  table.split { page-break-inside: auto; }
+  table.split tr { page-break-inside: avoid; }
+  img.fig { width: 82%; display: block; margin: 6px auto 10px; page-break-inside: avoid; }
+  pre { background: #F4F6FA; border: 1px solid #d6dbe4; padding: 9px 11px; font-size: 8.6pt; line-height: 1.4; white-space: pre-wrap; page-break-inside: avoid; text-align: left; }
+  ul { margin: 4px 0 8px 18px; padding: 0; }
+  li { margin-bottom: 5px; }
+  .pb { page-break-before: always; }
+  .nota { font-size: 9.5pt; font-style: italic; color: #555; }
+
+  .cover { height: 212mm; text-align: center; page-break-after: always; padding-top: 6mm; }
+  .cover .logo { width: 62mm; display: block; margin: 0 auto; }
+  .cover .raya { width: 34mm; border-top: 1.2px solid #1d1d1d; margin: 18mm auto 12mm; }
+  .cover .curso { font-size: 11pt; color: #444; line-height: 1.55; margin: 0; }
+  .cover .eti { font-size: 8.6pt; letter-spacing: 3.2px; color: #666; text-transform: uppercase; margin: 12px 0 0; line-height: 1.7; }
+  .cover h1 { font-size: 21pt; color: #1B3F94; line-height: 1.22; margin: 14px 8mm 10px; }
+  .cover .sub { font-style: italic; color: #555; font-size: 10.5pt; margin: 0 6mm; line-height: 1.5; }
+  .cover .equipo { font-size: 13pt; font-weight: bold; margin: 26mm 0 8px; }
+  .cover table.int { width: 118mm; margin: 0 auto; font-size: 10.5pt; page-break-inside: avoid; }
+  .cover table.int td { border: none; background: none; padding: 4px 6px; text-align: left; }
+  .cover table.int td.m { font-family: Arial, sans-serif; font-size: 9.5pt; }
+  .cover table.int tr:last-child td { border-bottom: 1px solid #c9ced8; }
+  .cover .caso { margin-top: 24mm; font-size: 10pt; }
+  .cover .fecha { color: #666; font-size: 9.5pt; margin-top: 4px; }
+
+  .indice h2 { margin-top: 0; }
+  .toc { font-size: 10pt; line-height: 1.25; }
+  .toc .l { display: flex; align-items: baseline; margin: 0 0 7px; }
+  .toc .l .t { white-space: nowrap; }
+  .toc .l .d { flex: 1; border-bottom: 1px dotted #444; margin: 0 4px; transform: translateY(-3px); }
+  .toc .l1 .t { font-weight: bold; }
+  .toc .l2 { padding-left: 22px; font-size: 9.4pt; }
+
+  .trazas { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+  .trazas table { font-size: 8.3pt; margin: 2px 0 10px; }
+  .trazas th, .trazas td { padding: 3px 5px; }
+  .trazas caption { text-align: left; font-family: Arial, sans-serif; font-weight: bold; font-size: 9pt; padding: 2px 0 3px; }
+  .trazas tr.falla td { background: #fbe3e1; font-weight: bold; }
+  .trazas tr.sintoma td { color: #777; }
+  .refs p { padding-left: 26px; text-indent: -26px; margin: 0 0 7px; font-size: 10pt; text-align: left; }
+  table.reg { table-layout: fixed; font-size: 7.7pt; }
+  table.reg th, table.reg td { padding: 4px 5px; overflow-wrap: anywhere; }
+  .glos td:first-child { width: 24%; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+<img class="logo" src="logo_tec.png" alt="Tecnológico de Monterrey">
+<div class="raya"></div>
+<p class="curso">Maestría en Inteligencia Artificial Aplicada</p>
+<p class="curso">IA5004.10 Sistemas multiagente · Trimestre sept - dic 2026</p>
+<p class="eti">Skill Lab 3<br>Evidencia, recuperación y acciones controladas</p>
+<h1>Distribuidora Cuauhtémoc: qué evidencia entra a la mesa y qué acciones pasan la aduana</h1>
+<p class="sub">Comparación de tres paquetes de contexto, flujo condicional con cuatro veredictos propuestos por Luna y autorizados por reglas, y reversibilidad de dos entradas indebidas</p>
+<p class="equipo">Entrega individual</p>
+<table class="int">
+<tr><td>Oscar Alberto Ramírez Anaya</td><td class="m">A01795438</td></tr>
+</table>
+<p class="caso"><b>Caso:</b> Distribuidora Cuauhtémoc · conjunto común de datos (Skill_Lab_3.zip) · modalidad <code>luna_api</code></p>
+<p class="fecha">Repositorio: <a href="https://github.com/oscar-ramirez-anaya/SkillLab3_A01795438">https://github.com/oscar-ramirez-anaya/SkillLab3_A01795438</a></p>
+<p class="fecha">1 de noviembre de 2026</p>
+</div>
+
+<div class="indice">
+<h2>Índice</h2>
+<div class="toc">
+<div class="l l1"><span class="t">1. Contexto y método</span><span class="d"></span><span>{P1}</span></div>
+<div class="l l2"><span class="t">1.1 El caso y su relación con el Aprende</span><span class="d"></span><span>{P2}</span></div>
+<div class="l l2"><span class="t">1.2 Datos comunes y modalidad</span><span class="d"></span><span>{P3}</span></div>
+<div class="l l1"><span class="t">2. Parte A: la mesa de contexto</span><span class="d"></span><span>{P4}</span></div>
+<div class="l l2"><span class="t">2.1 Los tres paquetes</span><span class="d"></span><span>{P5}</span></div>
+<div class="l l2"><span class="t">2.2 Elección del paquete y límites de la comparación</span><span class="d"></span><span>{P6}</span></div>
+<div class="l l1"><span class="t">3. Parte B: la aduana de acciones</span><span class="d"></span><span>{P7}</span></div>
+<div class="l l2"><span class="t">3.1 Reglas de la aduana</span><span class="d"></span><span>{P8}</span></div>
+<div class="l l2"><span class="t">3.2 Registro de ejecución</span><span class="d"></span><span>{P9}</span></div>
+<div class="l l2"><span class="t">3.3 Propuesta del enrutador frente a autorización</span><span class="d"></span><span>{P10}</span></div>
+<div class="l l1"><span class="t">4. Ruptura y reversibilidad</span><span class="d"></span><span>{P11}</span></div>
+<div class="l l2"><span class="t">4.1 La aduana apagada</span><span class="d"></span><span>{P12}</span></div>
+<div class="l l2"><span class="t">4.2 Clase y costo de corregir cada entrada indebida</span><span class="d"></span><span>{P13}</span></div>
+<div class="l l1"><span class="t">5. Los cinco resultados del resumen</span><span class="d"></span><span>{P14}</span></div>
+<div class="l l1"><span class="t">6. Conclusiones</span><span class="d"></span><span>{P15}</span></div>
+<div class="l l1"><span class="t">Apéndice A. Declaración de uso de IA</span><span class="d"></span><span>{P16}</span></div>
+<div class="l l1"><span class="t">Glosario</span><span class="d"></span><span>{P17}</span></div>
+<div class="l l1"><span class="t">Referencias</span><span class="d"></span><span>{P18}</span></div>
+</div>
+<p class="nota" style="margin-top:14px">Resultados técnicos (sección 5, con el detalle en las secciones 2 a 4): 60 %. Interpretación: elección del paquete (sección 2.2) y reversibilidad (sección 4.2): 40 %. La declaración de uso de IA (apéndice A) es requisito. El notebook ejecutado, los datos, el registro de la ejecución, la figura y la fuente de este documento están en el repositorio indicado en la portada.</p>
+</div>
+
+<h2 class="pb">1. Contexto y método</h2>
+<h3>1.1 El caso y su relación con el Aprende</h3>
+<p>En Distribuidora Cuauhtémoc, una captura antigua de la brecha del preventista PREV-017 puede llevar a una decisión equivocada (Tecnológico de Monterrey, 2026a), y un caso duplicado o con un identificador inexistente en la bandeja genera trabajo de corrección. Este laboratorio continúa lo que el equipo diseñó en el Construye 3 (mesa de contexto con vigencias por fuente, clases de reversibilidad y prevención frente a compensación) y lo pone a prueba en dos partes:</p>
+<ul>
+<li><b>Parte A, la mesa de contexto:</b> comparar tres paquetes de contexto para la misma pregunta (generoso, sin fechas y curado) por tamaño, uso de la evidencia y vigencia.</li>
+<li><b>Parte B, la aduana de acciones:</b> seguir un flujo con estado en el que un enrutador <b>propone</b> la ruta de cuatro intentos de registro, un control independiente <b>decide</b> con reglas (existencia, duplicado, conflicto), la bandeja <b>conserva el estado</b> y la ruta <code>escalada</code> reserva la decisión a una persona.</li>
+</ul>
+<p>Es un flujo pequeño con roles separados, no una sociedad completa de agentes: el modelo nunca autoriza la escritura, y la bandeja es una lista en memoria que no se conecta con ningún sistema empresarial.</p>
+
+<h3>1.2 Datos comunes y modalidad</h3>
+<table>
+<tr><th style="width:22%">Campo</th><th style="width:14%">Valor</th><th>Uso en el notebook</th></tr>
+<tr><td class="b"><code>dias_captura</code></td><td class="n">32</td><td>Antigüedad simulada de la captura que usa el paquete sin fechas</td></tr>
+<tr><td class="b"><code>tokens_curado</code></td><td class="n">1,018</td><td>Tamaño didáctico precargado del paquete curado (no es consumo de Luna)</td></tr>
+<tr><td class="b"><code>tienda</code></td><td class="n">T0030</td><td>Tienda del caso válido; con T0002 forma el catálogo <code>TIENDAS_VALIDAS</code></td></tr>
+<tr><td class="b"><code>producto</code></td><td class="n">P012</td><td>Producto del caso válido; con P002 forma el catálogo <code>PRODUCTOS_VALIDOS</code></td></tr>
+</table>
+<p><b>Modalidad realizada: <code>luna_api</code>.</b> Una consulta al modelo <code>gpt-5.6-luna</code> por Aula Gateway (<code>/v1/chat/completions</code>), con la clave personal introducida por la entrada oculta del notebook; no aparece en celdas, salidas ni en este documento. Solo se enviaron los cuatro casos sintéticos (identificadores 1 a 4 y condiciones verdadero/falso). La misma clase <code>Bandeja</code> revisó cada intento con los datos originales, no con lo que sugirió el modelo.</p>
+<p><b>Instrumento.</b> Notebook del laboratorio (Tecnológico de Monterrey, 2026b) con pandas (McKinney, 2010) y matplotlib (Hunter, 2007), ejecutado completo de principio a fin en una sola sesión: las pruebas del instrumento imprimen "Comprobaciones locales correctas" y el validador de entrega, "Sin campos pendientes".</p>
+
+<h2 class="pb">2. Parte A: la mesa de contexto</h2>
+<h3>2.1 Los tres paquetes</h3>
+<p>Tabla tal como la genera el notebook a partir de la <code>dataclass</code> inmutable <code>PaqueteContexto</code>. Los conteos y el uso de la evidencia son resultados didácticos precargados; las dos cifras que salen del conjunto común están en negritas.</p>
+<table>
+<tr><th style="width:14%">Paquete</th><th style="width:12%">Fragmentos</th><th style="width:13%">Tokens didácticos</th><th>Uso de la evidencia decisiva</th><th style="width:16%">Antigüedad de la evidencia</th></tr>
+<tr><td class="b">generoso</td><td class="n">24</td><td class="n">6,800</td><td>NO: la captura decisiva quedó diluida</td><td>No la usó</td></tr>
+<tr><td class="b">sin_fechas</td><td class="n">6</td><td class="n">1,500</td><td>SÍ, pero con evidencia caduca</td><td class="n"><b>32 días</b></td></tr>
+<tr><td class="b">curado</td><td class="n">5</td><td class="n"><b>1,018</b></td><td>SÍ: evidencia decisiva, fechada y citada</td><td class="n">2 días</td></tr>
+</table>
+<img class="fig" src="../figuras/paquetes_contexto.png" alt="Tamaño didáctico de cada paquete">
+<p><b>Lectura.</b> El generoso es casi siete veces más grande que el curado (6,800 frente a 1,018 tokens) y aun así no usa la evidencia que decide el caso: más papeles en la mesa no significa mejor respuesta, y la evidencia importante se diluye entre fragmentos irrelevantes, como se ha documentado para contextos largos (Liu et al., 2024). La trampa es el paquete de en medio: con 1,500 tokens es apenas 482 más grande que el curado, responde con seguridad y sí usa la evidencia, pero esa evidencia tiene 32 días. Sin la fecha, nada lo distingue del curado.</p>
+
+<h3>2.2 Elección del paquete y límites de la comparación</h3>
+<p><b>Elección: paquete curado.</b> Con 5 fragmentos y 1,018 tokens ocupa cerca del 15 % de la mesa del generoso y, a diferencia de este, usa la captura decisiva. Frente al sin fechas, la diferencia no es el tamaño (1,018 frente a 1,500) sino la vigencia: 2 días contra 32. En el Construye 3 el equipo fijó 14 días como vigencia máxima para precios de competencia (Construye 3, sección de ventanas de vigencia), así que una captura de 32 días ya no describe la brecha actual del PREV-017 y una decisión de precio tomada con ella responde a un mercado que pudo haber cambiado. El curado, además, trae la evidencia fechada y citada, lo que permite auditarla.</p>
+<p><b>Regla de selección que se desprende:</b> primero se filtra por vigencia, después se selecciona lo mínimo que contiene la evidencia decisiva y se cita con su fecha. Es la secuencia seleccionar, comprimir, aislar y citar del módulo, con la vigencia como condición de entrada.</p>
+<p><b>Límites de esta comparación.</b> (1) Los tamaños y el uso de la evidencia están precargados: el notebook no ejecutó búsquedas ni midió la calidad de una respuesta. (2) Los 1,018 tokens no son consumo real de Luna ni un costo calculado. (3) Los 32 días los aporta la simulación; en un sistema real habría que extraer y validar la fecha de cada fuente, y un paquete curado con fechas mal extraídas tendría el mismo problema que el sin fechas. (4) Con un solo caso no se puede generalizar: antes de adoptar la regla habría que medir aciertos en varios casos con fuentes reales.</p>
+
+<h2 class="pb">3. Parte B: la aduana de acciones</h2>
+<h3>3.1 Reglas de la aduana</h3>
+<p>Antes de escribir, <code>Bandeja.escribir_caso</code> hace tres preguntas en este orden y devuelve un veredicto de conjunto cerrado (<code>ResultadoAccion</code>, un <code>Enum</code> de cuatro valores):</p>
+<table>
+<tr><th style="width:6%">#</th><th>Pregunta</th><th style="width:28%">Si la respuesta lo exige</th><th style="width:16%">¿Escribe?</th></tr>
+<tr><td class="c">1</td><td>¿Existen tienda y producto en el catálogo (T0030, T0002 / P012, P002)?</td><td><code>rechazada_precondicion</code></td><td>No</td></tr>
+<tr><td class="c">2</td><td>¿Ya está registrado ese par tienda-producto?</td><td><code>rechazada_duplicado</code></td><td>No</td></tr>
+<tr><td class="c">3</td><td>¿Hay conflicto con una promoción (dato simulado)?</td><td><code>escalada</code></td><td>No; decide una persona</td></tr>
+<tr><td class="c">4</td><td>Pasó las tres comprobaciones</td><td><code>aceptada</code></td><td>Sí, una entrada local</td></tr>
+</table>
+<p>Cada rechazo es una decisión de diseño trabajando, no un error del sistema. El orden importa: un identificador inexistente se rechaza antes de preguntar por duplicados, y un conflicto solo llega a revisión humana si el caso es válido y nuevo.</p>
+
+<h3>3.2 Registro de ejecución</h3>
+<p>Salida literal de la celda del flujo en la ejecución entregada. "Propuesta" y "motivo" son de Luna; "veredicto" y el estado de la bandeja (entradas antes / después) son del control.</p>
+<table class="split reg">
+<tr><th style="width:4%">id</th><th style="width:11%">Caso</th><th style="width:12%">Intento</th><th style="width:21%">Propuesta de Luna</th><th style="width:17%">Motivo de Luna</th><th style="width:21%">Veredicto del control</th><th style="width:8%">Bandeja</th><th style="width:6%">Igual</th></tr>
+<tr><td class="c">1</td><td>Caso válido</td><td>T0030 · P012 · sin conflicto</td><td>aceptada</td><td>La tienda y el producto son válidos, no hay duplicado ni conflicto.</td><td>aceptada</td><td class="c">0 / 1</td><td class="c">sí</td></tr>
+<tr><td class="c">2</td><td>Tienda inexistente</td><td>T9999 · P012 · sin conflicto</td><td>rechazada_precondicion</td><td>La tienda no es válida.</td><td>rechazada_precondicion</td><td class="c">1 / 1</td><td class="c">sí</td></tr>
+<tr><td class="c">3</td><td>Duplicado</td><td>T0030 · P012 · sin conflicto</td><td>rechazada_duplicado</td><td>La propuesta está duplicada.</td><td>rechazada_duplicado</td><td class="c">1 / 1</td><td class="c">sí</td></tr>
+<tr><td class="c">4</td><td>Conflicto con promoción</td><td>T0002 · P002 · con conflicto</td><td>escalada</td><td>Existe un conflicto que requiere escalamiento.</td><td>escalada</td><td class="c">1 / 1</td><td class="c">sí</td></tr>
+</table>
+<p><b>Bandeja final: 1 entrada.</b> Consumo informado por el servicio: <code>{'modo': 'luna_api', 'origen': 'Luna por Aula Gateway', 'modelo': 'gpt-5.6-luna', 'llamadas': 1, 'tokens_entrada': 261, 'tokens_salida': 173, 'reutilizada': False}</code>. Estos 434 tokens reales no deben confundirse con los tamaños didácticos de la sección 2. Sin incidentes de la API.</p>
+<p><b>Lectura caso por caso.</b> El caso 1 pasa las tres preguntas y es la única escritura (0 a 1). El caso 2 cae en la primera: T9999 no está en el catálogo. El caso 3 repite exactamente el par del caso 1: existe, pero ya está registrado, y se rechaza sin modificar la entrada previa. El caso 4 usa T0002 y P002, que existen y no estaban registrados, así que pasa las dos primeras preguntas; el conflicto con la promoción lo envía a una persona sin escribir. Después del caso 1, la bandeja no cambia en ningún intento: <code>despues</code> es 1, 1, 1, 1, que es exactamente lo que comprueban las pruebas del instrumento.</p>
+
+<h3>3.3 Propuesta del enrutador frente a autorización</h3>
+<p><b>Quién propuso y quién autorizó.</b> Luna propuso las cuatro rutas; la clase <code>Bandeja</code>, con las reglas y los datos originales, autorizó la única escritura. La propuesta no se usa como permiso: aunque Luna hubiera propuesto <code>aceptada</code> para T9999, el control habría devuelto <code>rechazada_precondicion</code> y el registro habría conservado ambos valores con <code>coincide = False</code>. El adaptador, además, valida que la respuesta tenga exactamente cuatro propuestas con <code>id</code>, <code>ruta</code> del catálogo y <code>motivo</code>; valida estructura, no acierto.</p>
+<p><b>¿Aportó algo el modelo?</b> Las cuatro propuestas coincidieron con el control, pero no aportaron información que las reglas no tuvieran: las condiciones ya llegaban como verdadero o falso, y el propio mensaje de sistema le dicta a Luna las mismas reglas en el mismo orden. Los motivos son correctos pero genéricos ("La propuesta está duplicada" no dice qué par ni contra qué registro), así que tampoco mejoran la explicación del registro. En este caso bastaban las reglas: 434 tokens por un resultado que el camino <code>sin_api</code> obtiene con costo cero. Un modelo se justificaría cuando la entrada sea texto ambiguo (por ejemplo, el reporte libre de un preventista) que hay que convertir en esas condiciones, y aun entonces la autorización debería seguir en las reglas.</p>
+<p><b>Por qué se reserva el conflicto a una persona.</b> Elegir entre respetar una promoción vigente y registrar el caso es un juicio comercial con consecuencias sobre margen y relación con la cadena; no hay una regla que lo resuelva sin información que el flujo no tiene. Escalar no escribe nada, así que equivocarse en esa ruta es barato. En este laboratorio escalar no envía un aviso ni espera respuesta: el flujo humano completo (incluida la política de silla vacía del Construye 3) queda fuera del alcance.</p>
+
+<h2 class="pb">4. Ruptura y reversibilidad</h2>
+<h3>4.1 La aduana apagada</h3>
+<p>La celda de ruptura repite las tres primeras llamadas con <code>precondiciones=False</code>. La salida fue: "Sin aduana, la bandeja admitió 3 entradas; 2 de ellas eran indebidas (la tienda fantasma y el duplicado)".</p>
+<table>
+<tr><th style="width:8%">Llamada</th><th style="width:22%">Intento</th><th style="width:25%">Con aduana</th><th style="width:20%">Sin aduana</th><th>¿Legítima?</th></tr>
+<tr><td class="c">1</td><td>T0030 · P012</td><td>aceptada (1 entrada)</td><td>escrita</td><td>Sí</td></tr>
+<tr><td class="c">2</td><td>T9999 · P012</td><td>rechazada_precondicion</td><td>escrita</td><td>No: tienda inexistente</td></tr>
+<tr><td class="c">3</td><td>T0030 · P012</td><td>rechazada_duplicado</td><td>escrita</td><td>No: duplicado</td></tr>
+<tr><td colspan="2" class="b">Total en la bandeja</td><td class="b">1</td><td class="b">3</td><td class="b">2 indebidas</td></tr>
+</table>
+<p>Los tipos siguen siendo obligatorios aun con el interruptor apagado (por eso <code>precondiciones="False"</code> como texto se rechaza en las pruebas); lo que se omite son solo las reglas de negocio.</p>
+
+<h3>4.2 Clase y costo de corregir cada entrada indebida</h3>
+<p>Distingo lo <b>ejecutado</b> en el notebook (una lista en memoria que se reconstruye sin costo, sin avisos ni pedidos externos) del <b>supuesto de operación real</b>, que no ocurrió aquí. La clase depende de los efectos que la entrada alcance a producir, no del tipo de error.</p>
+<table class="split">
+<tr><th style="width:16%">Entrada</th><th style="width:15%">Clase</th><th style="width:22%">Lo ejecutado</th><th>Supuesto de operación real y costo de corregir</th></tr>
+<tr><td class="b">Duplicado (T0030 · P012)</td><td class="b">reversible_con_costo</td><td>Segunda tupla (T0030, P012) en la lista; se elimina o se reconstruye la bandeja sin costo.</td><td>El duplicado llega a la bandeja del gerente de zona y el caso se asigna dos veces al preventista. Corregirlo exige identificar el registro original, fusionar el historial, cancelar la visita repetida y avisar a los involucrados. Si alguien ya actuó dos veces (doble visita o doble pedido de reabasto), ese tiempo no se recupera y el pedido extra se compensa con una devolución.</td></tr>
+<tr><td class="b">Tienda inexistente (T9999 · P012)</td><td class="b">reversible_con_costo</td><td>Tupla (T9999, P012) en la lista; se borra sin efecto.</td><td>Un caso de una tienda que no existe no se puede atender, pero entra a los conteos y reportes de quiebres y alguien tiene que investigarlo: rastrear el origen del identificador (captura, integración o modelo), confirmar que no es una tienda nueva sin alta en el catálogo, darlo de baja y recalcular los indicadores que lo contaron. Además resta confianza en la bandeja.</td></tr>
+</table>
+<p><b>Cuándo cambiaría la clase.</b> Ninguna de las dos es <code>reversible</code> sin más en operación real, porque corregirlas consume trabajo de personas y conciliación. Ambas pasarían a <code>irreversible</code> si hubieran disparado una acción externa, como un pedido al proveedor o un aviso a la cadena, porque ese efecto ya no se retira borrando el registro. En el notebook nada de eso ocurre.</p>
+<p><b>Cuál cuesta más.</b> El duplicado: es una entrada válida y verosímil, así que es más probable que alguien la ejecute y genere efectos dobles; la tienda inexistente no se puede ejecutar y su costo se queda en depuración. Por eso la regla de duplicados es la que más valor protege: <b>prevenir</b> antes de escribir es más barato que <b>compensar</b> después, la misma distinción que el equipo aplicó a las herramientas del agente en el Construye 3.</p>
+
+<h2 class="pb">5. Los cinco resultados del resumen</h2>
+<p>Valores impresos por la celda de resumen del notebook en la ejecución entregada, con su dato o regla de origen.</p>
+<table class="split">
+<tr><th style="width:4%">#</th><th style="width:22%">Resultado</th><th style="width:15%">Valor</th><th>Explicación y origen</th></tr>
+<tr><td class="c">1</td><td>Tokens didácticos del paquete curado</td><td class="b">1018</td><td>Sale de <code>tokens_curado</code> en <code>skill_lab3_datos.json</code> y se asigna al paquete curado en <code>PAQUETES</code>. Es un tamaño didáctico precargado, no consumo de Luna; equivale a cerca del 15 % de los 6,800 tokens del paquete generoso.</td></tr>
+<tr><td class="c">2</td><td>Días de la captura sin fechas</td><td class="b">32</td><td>Sale de <code>dias_captura</code> en <code>skill_lab3_datos.json</code> y es el <code>dias_evidencia</code> del paquete sin_fechas: la antigüedad simulada de la captura de la brecha del PREV-017. Es la trampa del laboratorio: el paquete es chico (1,500 tokens) pero su evidencia está caduca frente a los 2 días del curado.</td></tr>
+<tr><td class="c">3</td><td>Veredicto de la llamada 2</td><td class="b">rechazada_precondicion</td><td>La llamada 2 intenta registrar T9999 con P012. La primera regla de la aduana comprueba existencia: T9999 no está en <code>TIENDAS_VALIDAS</code> (T0030 y T0002), así que se rechaza antes de revisar duplicados o conflictos y la bandeja sigue con 1 entrada (antes/después 1/1).</td></tr>
+<tr><td class="c">4</td><td>Veredicto de la llamada 4</td><td class="b">escalada</td><td>La llamada 4 usa T0002 y P002, que existen en el catálogo, y el par no estaba registrado, así que pasa las dos primeras reglas; <code>conflicto=True</code> activa la tercera: hay choque con una promoción y la decisión se reserva a una persona sin escribir (antes/después 1/1).</td></tr>
+<tr><td class="c">5</td><td>Entradas indebidas sin precondiciones</td><td class="b">2</td><td>Con <code>precondiciones=False</code> la bandeja admitió las tres llamadas: el caso válido (T0030, P012), la tienda fantasma T9999 y la repetición de T0030/P012. 3 entradas menos 1 legítima = 2 indebidas. Con la aduana encendida las mismas llamadas dejan 1 entrada: la diferencia es exactamente lo que las reglas evitan.</td></tr>
+</table>
+<p>Los veredictos 3 y 4 no dependen de lo que proponga el enrutador: las pruebas del instrumento recalculan los cuatro veredictos con una bandeja nueva y exigen <code>["aceptada", "rechazada_precondicion", "rechazada_duplicado", "escalada"]</code> y una sola entrada, sin consultar al modelo.</p>
+
+<h2>6. Conclusiones</h2>
+<ul>
+<li><b>Contexto.</b> Seleccionaría por vigencia antes que por tamaño: primero se descarta la evidencia vencida y luego se elige lo mínimo que contiene la evidencia decisiva, fechada y citada. Lo respalda que el paquete sin_fechas tiene casi el tamaño del curado (1,500 frente a 1,018 tokens) pero usa una captura de 32 días, mientras el generoso gasta 6,800 tokens y no usa la evidencia.</li>
+<li><b>Control.</b> Costaría más corregir el duplicado, bajo el supuesto de que llega a la bandeja y se atiende dos veces: una doble visita o un doble reabasto ya no se deshacen, mientras que la tienda inexistente no se puede ejecutar y su costo es de depuración. Lo previene la regla de duplicados, segunda pregunta de la aduana; a la tienda fantasma la detiene la regla de existencia contra el catálogo.</li>
+<li><b>Orquestación.</b> Luna propuso las cuatro rutas y la clase <code>Bandeja</code>, con las reglas y los datos originales, autorizó la única escritura. Las cuatro propuestas coincidieron con el control, con un costo de 261 tokens de entrada y 173 de salida, pero no aportaron nada que las reglas no tuvieran: las condiciones ya llegaban como verdadero o falso. El conflicto con la promoción se reservó a una persona porque elegir entre la promoción y el caso es un juicio comercial que no resuelve una regla. En este caso bastaban las reglas; un modelo se justifica cuando la entrada es texto ambiguo.</li>
+</ul>
+<p>En las integraciones con sistemas PMS y POS que trabajo a diario aplica el mismo patrón: el componente que interpreta la entrada puede proponer, pero la escritura en el sistema destino pasa por validaciones deterministas de existencia e idempotencia, porque un duplicado en una factura o una orden cuesta mucho más corregir que rechazar.</p>
+
+<h2 class="pb">Apéndice A. Declaración de uso de IA</h2>
+<p><b>Qué delegué:</b> usé Claude Code, asistente de IA de Anthropic (modelo Claude Opus 5.5), como apoyo de análisis y, esta vez, como agente de código coordinado: con mi análisis como base, completó las celdas DECISIÓN del notebook, ejecutó el notebook en modalidad <code>luna_api</code> pasando mi clave personal por una entrada oculta y armó este documento con el formato de mis entregas previas. Lo hice con el mismo patrón que estudia esta semana: el agente propone y ejecuta, y yo decido y verifico. Luna (<code>gpt-5.6-luna</code>, por Aula Gateway) solo actuó como enrutador del flujo: propuso las cuatro rutas y no autorizó ninguna escritura.</p>
+<p><b>Qué verifiqué:</b> los cinco valores contra <code>skill_lab3_datos.json</code> y las reglas de la aduana; que el registro de la sección 3.2 es la salida literal de la ejecución entregada (también guardado en <code>registro_ejecucion.json</code>); que las pruebas del instrumento pasan y el validador no reporta pendientes; que la clave no aparece en el notebook, en el repositorio ni en este PDF; y el consumo reportado por el servicio (261 / 173 tokens).</p>
+<p><b>Qué corregí:</b> la primera ejecución automatizada se interrumpió por un error del script de ejecución justo después de la consulta a Luna, y esa respuesta no se conservó. Se corrigió el script, se probó completo con reglas locales (sin red) y se repitió una sola vez la consulta; la ejecución entregada es esa segunda, completa y en una sola sesión.</p>
+<p><b>Qué decidí yo:</b> la elección del paquete curado, las clases de reversibilidad con sus supuestos de operación, la conclusión de que en este caso bastaban las reglas y el formato del documento. La interpretación final y la redacción son mi responsabilidad.</p>
+<p><b>Contexto:</b> como CTO, en mi empresa ya trabajo con agentes de IA en todos mis procesos y en distintas etapas, siempre con control humano y sin soltar el conocimiento: la IA es un apoyo mutuo, no un sustituto del criterio. Este laboratorio siguió esa misma práctica.</p>
+
+<h2>Glosario</h2>
+<table class="glos">
+<tr><th>Término</th><th>Definición en este documento</th></tr>
+<tr><td>Mesa (ventana de contexto)</td><td>Lo que el modelo tiene enfrente en una llamada; trabaja solo con lo que se le pone ahí.</td></tr>
+<tr><td>Paquete de contexto</td><td>Selección de fragmentos que entra a la mesa para una pregunta; se compara por tamaño, uso de la evidencia y vigencia.</td></tr>
+<tr><td>Vigencia</td><td>Antigüedad máxima con la que una evidencia se considera actual; condición de entrada a la mesa.</td></tr>
+<tr><td>Enrutador</td><td>Componente que propone la ruta de cada caso; en <code>luna_api</code>, Luna. Su propuesta no es un permiso.</td></tr>
+<tr><td>Aduana (precondiciones)</td><td>Control independiente que, antes de escribir, comprueba existencia, duplicado y conflicto, en ese orden.</td></tr>
+<tr><td>Veredicto de conjunto cerrado</td><td>Resultado que solo puede tomar uno de cuatro valores de <code>ResultadoAccion</code>; quien lo consume puede confiar en el tipo.</td></tr>
+<tr><td>Escalamiento</td><td>Ruta que reserva la decisión a una persona sin escribir en la bandeja.</td></tr>
+<tr><td>Registro de ejecución</td><td>Secuencia de casos, propuestas, veredictos y estado antes/después de la bandeja.</td></tr>
+<tr><td>Clase de reversibilidad</td><td>Reversible, reversible con costo o irreversible, según los efectos que la entrada alcanzó a producir.</td></tr>
+<tr><td>Prevención frente a compensación</td><td>Impedir una entrada indebida antes de escribir frente a corregirla después de que tuvo efectos.</td></tr>
+</table>
+
+<h2 class="pb">Referencias</h2>
+<div class="refs">
+<p>Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. <i>Computing in Science &amp; Engineering, 9</i>(3), 90–95. https://doi.org/10.1109/MCSE.2007.55</p>
+<p>Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., &amp; Liang, P. (2024). Lost in the middle: How language models use long contexts. <i>Transactions of the Association for Computational Linguistics, 12</i>, 157–173. https://doi.org/10.1162/tacl_a_00638</p>
+<p>McKinney, W. (2010). Data structures for statistical computing in Python. En S. van der Walt &amp; J. Millman (Eds.), <i>Proceedings of the 9th Python in Science Conference</i> (pp. 56–61). https://doi.org/10.25080/Majora-92bf1922-00a</p>
+<p>Tecnológico de Monterrey. (2026a). <i>Caso estándar: Distribuidora Cuauhtémoc</i> [Material del curso IA5004.10 Sistemas multiagente]. Experiencia21.</p>
+<p>Tecnológico de Monterrey. (2026b). <i>Skill Lab 3: Evidencia, recuperación y acciones controladas</i> [Notebook <code>Skill_Lab_3.ipynb</code>, conjunto común <code>skill_lab3_datos.json</code> y adaptador <code>orquestacion_aula.py</code>; material del curso IA5004.10 Sistemas multiagente]. Experiencia21.</p>
+</div>
+
+</body>
+</html>

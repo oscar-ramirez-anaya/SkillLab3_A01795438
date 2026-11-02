@@ -1,0 +1,57 @@
+{
+ "registro": [
+  {
+   "id": 1,
+   "caso": "Caso válido",
+   "propuesta": "aceptada",
+   "motivo": "La tienda y el producto son válidos, no hay duplicado ni conflicto.",
+   "veredicto": "aceptada",
+   "antes": 0,
+   "despues": 1,
+   "coincide": true
+  },
+  {
+   "id": 2,
+   "caso": "Tienda inexistente",
+   "propuesta": "rechazada_precondicion",
+   "motivo": "La tienda no es válida.",
+   "veredicto": "rechazada_precondicion",
+   "antes": 1,
+   "despues": 1,
+   "coincide": true
+  },
+  {
+   "id": 3,
+   "caso": "Duplicado",
+   "propuesta": "rechazada_duplicado",
+   "motivo": "La propuesta está duplicada.",
+   "veredicto": "rechazada_duplicado",
+   "antes": 1,
+   "despues": 1,
+   "coincide": true
+  },
+  {
+   "id": 4,
+   "caso": "Conflicto con promoción",
+   "propuesta": "escalada",
+   "motivo": "Existe un conflicto que requiere escalamiento.",
+   "veredicto": "escalada",
+   "antes": 1,
+   "despues": 1,
+   "coincide": true
+  }
+ ],
+ "meta": {
+  "modo": "luna_api",
+  "origen": "Luna por Aula Gateway",
+  "modelo": "gpt-5.6-luna",
+  "llamadas": 1,
+  "tokens_entrada": 261,
+  "tokens_salida": 173,
+  "reutilizada": false
+ },
+ "incidente": "",
+ "indebidas": 2,
+ "r2": "rechazada_precondicion",
+ "r4": "escalada"
+}
